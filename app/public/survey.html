@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<<<<<<< HEAD
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery.js"></script>
@@ -25,16 +24,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="css/survey.css" /> -->
     <!-- <script src="main.js"></script> -->
-=======
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/home.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="/css/survey.css" />
-    <script src="/js/main.js"></script>
->>>>>>> fb947c622356d037e5d5dff6e3545215ec9b5695
 </head>
 
 <body>
@@ -98,7 +87,6 @@
         
 </div>
 <div id="resultsModal" class="modal fade" role="dialog">
-<<<<<<< HEAD
         <div class="modal-dialog">
 
             <!-- Modal content-->
@@ -121,38 +109,11 @@
 <script>
 $("#submit").on("click", function(){
     console.log("Inside submit button");
-=======
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h2 class="modal-title"><strong>Best Match</strong></h2>
-            </div>
-            <div class="modal-body">
-                <h2 id="matchName"></h2>
-                <img id="matchImg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP5gbBJlpb9xTj7CYBT-p4e-oqjniHdvwe8tnMG0Srr-SfbxZ5
-https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP5gbBJlpb9xTj7CYBT-p4e-oqjniHdvwe8tnMG0Srr-SfbxZ5
-" alt="">
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-</body>
-<script>
-$("#submit").on("click", function(){
-    event.preventDefault();
-
->>>>>>> fb947c622356d037e5d5dff6e3545215ec9b5695
     var userData = {
         name: $("#name").val(),
         url: $("#url").val(),
         scores: [$("#question1").val(),$("#question2").val(),$("#question3").val(),$("#question4").val(),$("#question5").val()]
     };
-<<<<<<< HEAD
     $("#name").val(""),
     $("#url").val(""),
     $("#question1").val("");
@@ -171,22 +132,5 @@ return false;
 });
 </script>
 </body>
-=======
-
-    $.post("/api/friends",userData,function(data){
-        $("#matchName").text(data.name);
-        $("matchImg").attr("src",data.url);
-        $("#resultModal").modal('toggle');  
-    });
-    
-    return false;
-});
-
-
-
-
-
-</script>
->>>>>>> fb947c622356d037e5d5dff6e3545215ec9b5695
 </html>
 
